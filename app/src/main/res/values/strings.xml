@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My New Tip Calculator</string>
+    <string name="MainActivityTextViewTip">Total tip % :</string>
+    <string name="MainActivityTextViewTotal">Total sum :</string>
+    <string name="MainActivityTextViewCustomTip">10%</string>
+    <string name="MainActivityEditTextZero">0.00</string>
+</resources>
