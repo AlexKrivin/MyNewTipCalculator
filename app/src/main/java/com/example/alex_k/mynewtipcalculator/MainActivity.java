@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
         if ( savedInstanceState == null ) // приложение запущено впервые
         {
             currentBillTotal = 0.0;               // инициализация суммы счета нулем
-            currentCustomPercent = 0;            // инициализация пользовательских чаевых значением 18 %
+            currentCustomPercent = 10;            // инициализация пользовательских чаевых значением 10%
         } // конец структуры if
         else // приложение восстановлено из памяти
         {
@@ -50,6 +50,7 @@ public class MainActivity extends Activity {
         totalCustomEditText = (EditText) findViewById(R.id.totalCustomEditText);
         // получение billEditText
         billEditText = (EditText) findViewById(R.id.billEditText);
+        //billEditText.setSelection(0);
         // billEditTextWatcher обрабатывает событие onTextChanged из billEditText
         billEditText.addTextChangedListener(billEditTextWatcher);
         // получение SeekBar, используемого для подсчета суммы пользовательских чаевых

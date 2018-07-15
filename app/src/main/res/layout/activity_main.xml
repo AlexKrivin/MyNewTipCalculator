@@ -8,17 +8,17 @@
 
     <RelativeLayout
         android:layout_width="368dp"
-        android:layout_height="495dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
         <EditText
             android:id="@+id/totalCustomEditText"
-            android:layout_width="136dp"
-            android:layout_height="35dp"
-            android:layout_alignEnd="@+id/imageView"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="54dp"
+            android:layout_width="163dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/totalCustomTextView"
+            android:layout_alignEnd="@+id/textView"
             android:ems="10"
             android:inputType="textPersonName" />
 
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="31dp"
             android:text="TIP CALCULATOR"
             android:textColor="#1a46f5"
             android:textSize="24sp"
@@ -40,31 +40,16 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="59dp"
+            android:layout_marginTop="123dp"
             android:text="1. Enter your bill amount in order to calculate tip"
             android:textColor="#4245f7"
             android:textStyle="italic" />
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="179dp"
-            android:layout_height="40dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="104dp"
-            android:adjustViewBounds="false"
-            android:cropToPadding="false"
-            android:scaleType="fitXY"
-            android:tint="#e3eef3"
-            app:srcCompat="@android:drawable/editbox_background_normal" />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="188dp"
+            android:layout_centerInParent="true"
             android:text="2. Choose preferable persentage of tip"
             android:textColor="#4245f7"
             android:textStyle="italic" />
@@ -73,20 +58,13 @@
             android:id="@+id/seekBar"
             android:layout_width="249dp"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="221dp"
             android:max="100"
             android:progress="10"
             android:scrollbarStyle="outsideOverlay"
             android:visibility="visible" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/imageView"
-            android:layout_toStartOf="@+id/textView"
-            android:tint="#fbd9e1"
-            app:srcCompat="@android:drawable/ic_menu_edit" />
 
         <TextView
             android:id="@+id/textView4"
@@ -94,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="183dp"
+            android:layout_marginBottom="169dp"
             android:text="3. TIP"
             android:textColor="#4245f7" />
 
@@ -120,24 +98,30 @@
 
         <EditText
             android:id="@+id/billEditText"
-            android:layout_width="143dp"
-            android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/imageView"
+            android:layout_width="226dp"
+            android:layout_height="38dp"
+            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="193dp"
+            android:background="#cff4f4"
             android:ems="10"
-            android:inputType="text|textPersonName"
+            android:hint="0.00"
+            android:inputType="numberDecimal"
             android:singleLine="true"
-            android:text="@string/MainActivityEditTextZero"
-            android:textColor="#c8c8c8"
-            android:visibility="visible" />
+            android:textColor="#000000"
+            android:textColorHint="#c2c2c2"
+            android:visibility="visible" >
+
+            <requestFocus/>
+        </EditText>
+
 
         <EditText
             android:id="@+id/tipCustomEditText"
-            android:layout_width="136dp"
-            android:layout_height="34dp"
-            android:layout_alignEnd="@+id/imageView"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="104dp"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tipCustomTextView"
+            android:layout_alignStart="@+id/totalCustomEditText"
             android:ems="10"
             android:inputType="textPersonName" />
 
@@ -145,7 +129,7 @@
             android:id="@+id/customTipTextView"
             android:layout_width="48dp"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
+            android:layout_alignTop="@+id/seekBar"
             android:layout_toEndOf="@+id/seekBar"
             android:text="@string/MainActivityTextViewCustomTip" />
 
